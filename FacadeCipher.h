@@ -20,7 +20,7 @@ see the README.txt file for the documentation
 #define DEFAULT_PWD_LENGTH      				32
 #define DEFAULT_MAX_RANDOM_VAL					1000
 #define DEFAULT_PADDING_VALUE					0
-#define MAX_UINT8_T_VAL							256
+#define MAX_UINT8_T_VAL						256
 
 
 #ifndef FacadeCipher_H
