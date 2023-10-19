@@ -37,7 +37,7 @@ class FacadeCipher
 		
 		FacadeCipher(uint8_t* key, int keyLen)
 		{
-			//clean key
+			
 			uint8_t cleanedKey[DEFAULT_PWD_LENGTH] = {};
 			
 			for(int i = 0; i < DEFAULT_PWD_LENGTH; i++)
@@ -47,7 +47,7 @@ class FacadeCipher
 				else
 					cleanedKey[i] = int(random(DEFAULT_MAX_RANDOM_VAL) % MAX_UINT8_T_VAL);
 			}
-			//create aes256 object and set the encryption key
+			
 			this->cipher =  new AES256();
 			keyOk = cipher->setKey(cleanedKey, DEFAULT_PWD_LENGTH);
 			blockSize = cipher->blockSize();
@@ -56,7 +56,7 @@ class FacadeCipher
 
 		FacadeCipher(String key)
 		{
-			//clean key
+			
 			uint8_t cleanedKey[DEFAULT_PWD_LENGTH] = {};
 			
 			for(int i = 0; i < DEFAULT_PWD_LENGTH; i++)
@@ -66,7 +66,7 @@ class FacadeCipher
 				else
 					cleanedKey[i] = int(random(DEFAULT_MAX_RANDOM_VAL) % MAX_UINT8_T_VAL);
 			}
-			//create aes256 object and set the encryption key
+			
 			this->cipher =  new AES256();
 			keyOk = cipher->setKey(cleanedKey, DEFAULT_PWD_LENGTH);
 			blockSize = cipher->blockSize();
