@@ -76,6 +76,7 @@ class FacadeCipher
 		~FacadeCipher()
 		{
 			cipher->clear();
+			cipher->~AES256();
 		};
 
 
